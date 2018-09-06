@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+    <com.qcloud.qclib.refresh.PullRefreshLayout
+        android:id="@+id/prl_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pullEnableRefresh="true"
+        app:pullEnableLoadMore="true"
+        app:pullDisableContentWhenRefresh="true"
+        app:pullEnableFooterFollowWhenLoadFinished="true"
+        app:pullDisableContentWhenLoading="true"
+        app:pullPrimaryColor="@color/colorAccent">
+
+        <com.qcloud.qclib.refresh.headers.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.qcloud.qclib.widget.customview.EmptyLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:elEmptyImage="@drawable/bmp_list_empty">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </com.qcloud.qclib.widget.customview.EmptyLayout>
+
+        <com.qcloud.qclib.refresh.footers.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.qcloud.qclib.refresh.PullRefreshLayout>
+
+</LinearLayout>

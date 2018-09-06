@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <system>
+        <unicode>UTF-8</unicode>
+        <app_sign>huikeduo</app_sign>
+
+        <!--演示服务器-->
+        <server>http://igs-app.demo.qi-cloud.com/</server>
+
+    </system>
+</config>
