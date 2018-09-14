@@ -5,6 +5,7 @@ import android.content.Context
 import android.support.multidex.MultiDex
 import com.qcloud.qclib.AppManager
 import com.qcloud.qclib.FrameConfig
+import com.qcloud.qclib.toast.ToastConfig
 import com.qcloud.qclib.utils.SharedUtil
 import com.qcloud.qclib.utils.StringUtil
 import com.qcloud.qclib.utils.TokenUtil

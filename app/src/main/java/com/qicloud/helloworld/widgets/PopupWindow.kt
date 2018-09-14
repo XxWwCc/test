@@ -1,6 +1,8 @@
-package com.qicloud.helloworld
+package com.qicloud.helloworld.widgets
 
 import android.content.Context
+import com.qicloud.helloworld.R
+import com.qicloud.helloworld.base.BasePopupWindow
 
 class PopupWindow(mContext: Context) : BasePopupWindow(mContext) {
 

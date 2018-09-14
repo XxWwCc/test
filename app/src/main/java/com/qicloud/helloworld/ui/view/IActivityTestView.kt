@@ -1,4 +1,4 @@
-package com.qicloud.helloworld.View
+package com.qicloud.helloworld.ui.view
 
 import com.qcloud.qclib.base.BaseView
 

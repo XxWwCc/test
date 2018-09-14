@@ -1,4 +1,4 @@
-package com.qicloud.helloworld
+package com.qicloud.helloworld.ui.widget
 
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -8,15 +8,13 @@ import com.qcloud.qclib.refresh.api.RefreshLayout
 import com.qcloud.qclib.refresh.listener.OnLoadMoreListener
 import com.qcloud.qclib.refresh.listener.OnRefreshListener
 import com.qcloud.qclib.toast.QToast
-import com.qcloud.qclib.widget.layoutManager.DividerItemDecoration
 import com.qcloud.qclib.widget.layoutManager.RecycleViewDivider
-import com.qicloud.helloworld.Presenter.impl.ActivityTestPresenterImpl
-import com.qicloud.helloworld.View.IActivityTestView
+import com.qicloud.helloworld.ui.presenter.impl.ActivityTestPresenterImpl
+import com.qicloud.helloworld.R
+import com.qicloud.helloworld.ui.view.IActivityTestView
 import com.qicloud.helloworld.adapters.TestAdapter
 import com.qicloud.helloworld.base.BaseActivity
-import junit.framework.Test
 import kotlinx.android.synthetic.main.activity_pull_refresh.*
-import timber.log.Timber
 
 /**
  * Description：
@@ -39,18 +37,17 @@ class TestActivity : BaseActivity<IActivityTestView, ActivityTestPresenterImpl>(
         layout_empty.setErrorImage(R.drawable.ic_launcher_background)
         layout_empty.setErrorText("出错了")
         layout_empty.setRetryText("重新加载")
-        layout_empty.setRetryListener(object : View.OnClickListener{
-            override fun onClick(p0: View?) {
-                pageNo = 1
-                loadData()
-            }
+        layout_empty.setRetryListener(View.OnClickListener {
+            /*pageNo = 1
+            loadData()*/
+            prl_test.autoRefresh()
         })
         layout_empty.showError()
         initRecyclerView()
 //        prl_test.autoRefresh()
     }
 
-    fun initRecyclerView(){
+    private fun initRecyclerView(){
         prl_test.setEnableRefresh(true)
         prl_test.setEnableLoadMore(true)
         prl_test.setOnRefreshListener(object : OnRefreshListener{

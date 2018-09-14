@@ -1,4 +1,4 @@
-package com.qicloud.helloworld
+package com.qicloud.helloworld.base
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.content.Context
 import android.support.annotation.FloatRange
 import android.support.v4.content.ContextCompat
 import android.view.WindowManager
+import com.qicloud.helloworld.R
 
 abstract class BasePopupWindow(protected val mContext: Context): PopupWindow(mContext) {
     var mView: View? = null

@@ -1,4 +1,4 @@
-package com.qicloud.helloworld
+package com.qicloud.helloworld.widgets
 
 import android.content.Context
 import android.graphics.*

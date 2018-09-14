@@ -3,19 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorAccent">
+    tools:context=".ui.widget.MainActivity"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:gravity="center">
 
-<!--    <com.qicloud.helloworld.ChuckWaveView
+<!--    <com.qicloud.helloworld.widgets.ChuckWaveView
         android:id="@+id/cwv"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center"/>-->
+    <EditText
+        android:layout_width="@dimen/margin_200dp"
+        android:layout_height="@dimen/margin_100dp"
+        android:enabled="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/btn_choice_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择日期"/>
+
+    <Button
+        android:id="@+id/btn_choice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择时间"/>
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"/>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退出"/>
+
+    <ImageView
+        android:id="@+id/iv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/bmp_list_empty"/>
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="相册"/>
+    <Button
+        android:id="@+id/btn_take_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="照相"/>
 
 </LinearLayout>

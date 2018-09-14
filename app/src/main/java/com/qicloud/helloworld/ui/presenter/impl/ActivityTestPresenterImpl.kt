@@ -1,8 +1,8 @@
-package com.qicloud.helloworld.Presenter.impl
+package com.qicloud.helloworld.ui.presenter.impl
 
 import com.qcloud.qclib.base.BasePresenter
-import com.qicloud.helloworld.Presenter.IActivityTestPresenter
-import com.qicloud.helloworld.View.IActivityTestView
+import com.qicloud.helloworld.ui.presenter.IActivityTestPresenter
+import com.qicloud.helloworld.ui.view.IActivityTestView
 
 /**
  * Description：
@@ -16,7 +16,7 @@ class ActivityTestPresenterImpl : BasePresenter<IActivityTestView>(), IActivityT
     private var noMoreData = true
 
     init {
-        for (i in 0 until 35){
+        for (i in 0 until 25){
             list.add("test:$i")
         }
     }
